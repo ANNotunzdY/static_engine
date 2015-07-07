@@ -1,24 +1,24 @@
 require_dependency "static_engine/application_controller"
 
 module StaticEngine
-  class StaticEngine::StaticController < ApplicationController
+  class StaticController < ApplicationController
 
     before_action :load_yaml
 
     def about
-      @about = @yaml[:about]
+      @about = @yaml["about"]
     end
 
     def legal
-      @about = @yaml[:legal]
+      @about = @yaml["legal"]
     end
 
     def privacy_policy
-      @privacy_policy = @yaml[:privacy_policy]
+      @privacy_policy = @yaml["privacy_policy"]
     end
 
     def contacts
-      @contacts = @yaml[:contacts]
+      @contacts = @yaml["contacts"]
     end
 
     def load_yaml
